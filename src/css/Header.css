@@ -1,0 +1,84 @@
+.header {
+  background: #c93236;
+  color: white;
+  border-bottom: 4px solid #a52429;
+}
+.header-inner {
+  max-width: 1240px;
+  min-height: 84px;
+  padding: 16px 32px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+.brand {
+  font-size: 1.25rem;
+  font-weight: 900;
+  letter-spacing: 0.04em;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+}
+.edition {
+  font-size: 0.65rem;
+  font-weight: 500;
+  opacity: 0.9;
+}
+.pokeball {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  border: 2px solid currentColor;
+  border-radius: 50%;
+  background: linear-gradient(
+    transparent 44%,
+    currentColor 44%,
+    currentColor 56%,
+    transparent 56%
+  );
+  position: relative;
+}
+.pokeball:after {
+  content: "";
+  position: absolute;
+  inset: 8px;
+  border: 2px solid currentColor;
+  background: #c93236;
+  border-radius: 50%;
+}
+.header nav {
+  display: flex;
+  gap: 8px;
+}
+.header button {
+  border: 0;
+  color: white;
+  background: transparent;
+  font-size: 0.85rem;
+}
+.header button:hover,
+.header button[aria-current] {
+  background: #a8262b;
+}
+.header :focus-visible {
+  outline-color: white;
+}
+@media (max-width: 520px) {
+  .header-inner {
+    padding: 16px 18px;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  .header nav {
+    width: 100%;
+  }
+  .header nav button {
+    flex: 1;
+  }
+  .edition {
+    display: inline;
+  }
+}

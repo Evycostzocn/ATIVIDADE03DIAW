@@ -1,0 +1,58 @@
+dialog {
+  width: min(440px, calc(100% - 32px));
+  max-height: calc(100dvh - 32px);
+  padding: 0;
+  border: 1px solid #ddd;
+  border-radius: 16px;
+  color: #282b30;
+  box-shadow: 0 24px 80px #0004;
+  overflow: auto;
+}
+dialog::backdrop {
+  background: #20252bc9;
+}
+.modal-content {
+  padding: 28px;
+}
+.modal-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+.close-button {
+  padding: 8px 14px;
+}
+.modal-ball {
+  width: 64px;
+  height: 64px;
+  color: #c93236;
+  margin: 20px 0 12px;
+}
+.modal-ball:after {
+  inset: 20px;
+  background: white;
+}
+.modal-content h2 {
+  font-size: 2rem;
+  letter-spacing: -0.04em;
+  margin: 0 0 12px;
+}
+.modal-content h3 {
+  font-size: 1rem;
+  margin: 28px 0 0;
+}
+.modal-content .stats {
+  gap: 20px;
+}
+.modal-content .stats dt {
+  font-size: 0.8rem;
+}
+.modal-content .stats dd {
+  font-size: 1.5rem;
+}
+.modal-note {
+  font-size: 0.75rem;
+  color: #676970;
+  margin: 24px 0 0;
+}

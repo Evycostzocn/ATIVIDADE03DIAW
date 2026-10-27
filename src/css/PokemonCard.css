@@ -1,0 +1,281 @@
+.pokemon-card {
+  --accent: #7e838b;
+  position: relative;
+  isolation: isolate;
+  background: linear-gradient(135deg, #f31b42, #dc0932 55%, #c5082d);
+  border: 2px solid #810c29;
+  border-radius: 20px 20px 28px 20px;
+  padding: 18px;
+  box-shadow:
+    inset 3px 3px 0 #ff728566,
+    inset -5px -4px 0 #95072588,
+    0 6px 0 #810c29,
+    0 12px 20px #44152120;
+  transition:
+    transform 180ms ease,
+    box-shadow 180ms ease;
+}
+.card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+  padding-bottom: 16px;
+  margin-bottom: 16px;
+  border-bottom: 2px solid #930b2e;
+}
+.device-lights {
+  display: flex;
+  align-items: flex-start;
+  gap: 6px;
+}
+.device-lens {
+  width: 42px;
+  height: 42px;
+  border: 4px solid #f3f2e8;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle at 32% 28%,
+    #b9f4ff 0 12%,
+    #35c5f4 15% 35%,
+    #0879b2 65%
+  );
+  box-shadow:
+    0 0 0 2px #672337,
+    inset -2px -3px 0 #005477;
+}
+.device-led {
+  width: 10px;
+  height: 10px;
+  border: 1px solid #6c2431;
+  border-radius: 50%;
+  box-shadow:
+    inset 1px 2px 1px #ffffff90,
+    0 1px 1px #700b28;
+}
+.led-red {
+  background: #a70026;
+}
+.led-yellow {
+  background: #f7da35;
+}
+.led-green {
+  background: #57c879;
+}
+.record-number {
+  font-family: ui-monospace, monospace;
+  color: #fff5e9;
+  font-weight: 700;
+  font-size: 0.75rem;
+  letter-spacing: 0.04em;
+}
+.device-screen {
+  padding: 10px 10px 7px;
+  border: 2px solid #5d3740;
+  border-radius: 10px 10px 10px 25px;
+  background: #e7e7dc;
+  box-shadow: 2px 3px 0 #920b2c;
+}
+.pokemon-card .pokemon-image {
+  height: 138px;
+  margin: 0;
+  border: 2px solid #263f3b;
+  border-radius: 5px;
+  background:
+    repeating-linear-gradient(0deg, #ffffff00 0 3px, #214c3510 3px 4px),
+    radial-gradient(ellipse at center, #e4f4d1, #acc4a1);
+  box-shadow: inset 0 3px 9px #15312530;
+}
+.pokemon-card .pokemon-image img {
+  width: 138px;
+  height: 138px;
+  transition:
+    transform 200ms ease,
+    filter 200ms ease;
+}
+.screen-trim {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 18px;
+  padding: 3px 6px 0;
+}
+.screen-trim span {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #dd1038;
+  border: 1px solid #75243b;
+}
+.screen-trim i {
+  width: 22px;
+  height: 12px;
+  background: repeating-linear-gradient(
+    0deg,
+    #616963 0 2px,
+    transparent 2px 4px
+  );
+}
+.pokemon-card h3 {
+  color: #fff8ed;
+  font-size: 1.3rem;
+  letter-spacing: -0.02em;
+  margin: 16px 0 8px;
+  text-shadow: 0 2px #8f0929;
+  overflow-wrap: anywhere;
+}
+/* A área do botão nativo cobre a carcaça inteira, inclusive o visor. */
+.card-trigger {
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  min-height: 0;
+  background: transparent;
+  font: inherit;
+  text-align: left;
+  text-shadow: inherit;
+}
+.card-trigger::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  border-radius: 20px 20px 28px 20px;
+}
+.card-trigger:hover {
+  background: transparent;
+}
+.card-trigger:active {
+  transform: none;
+}
+.card-trigger:focus-visible {
+  outline: none;
+}
+.card-trigger:focus-visible::after {
+  outline: 3px solid #087eae;
+  outline-offset: 5px;
+}
+.pokemon-card .type {
+  border: 1px solid #ffffff70;
+  box-shadow: 0 2px 0 #860b2930;
+}
+.pokemon-card .stats {
+  padding: 12px;
+  margin-top: 16px;
+  gap: 10px 8px;
+  border: 2px solid #233e34;
+  border-radius: 6px;
+  background: #d9e7b9;
+  box-shadow:
+    inset 0 2px 4px #28482c25,
+    1px 2px 0 #940b2e;
+}
+.pokemon-card .stats dt {
+  color: #385139;
+  font-size: 0.65rem;
+}
+.pokemon-card .stats dd {
+  color: #193b2c;
+  font-family: ui-monospace, monospace;
+  font-size: 1.1rem;
+}
+.device-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 16px;
+  height: 30px;
+}
+.device-pad {
+  width: 30px;
+  height: 30px;
+  background: #153d39;
+  clip-path: polygon(
+    33% 0,
+    67% 0,
+    67% 33%,
+    100% 33%,
+    100% 67%,
+    67% 67%,
+    67% 100%,
+    33% 100%,
+    33% 67%,
+    0 67%,
+    0 33%,
+    33% 33%
+  );
+}
+.device-keys {
+  display: flex;
+  gap: 5px;
+}
+.device-keys i {
+  width: 26px;
+  height: 12px;
+  border-radius: 3px;
+  border: 1px solid #075f8d;
+  background: #32b6e7;
+  box-shadow: 0 2px 0 #7e0925;
+}
+.device-speaker {
+  width: 26px;
+  height: 18px;
+  background: repeating-linear-gradient(
+    -25deg,
+    #810c29 0 3px,
+    transparent 3px 6px
+  );
+}
+@media (hover: hover) {
+  .pokemon-card:hover {
+    transform: translateY(-6px);
+    box-shadow:
+      inset 3px 3px 0 #ff728566,
+      inset -5px -4px 0 #95072588,
+      0 8px 0 #810c29,
+      0 20px 28px #44152130;
+  }
+  .pokemon-card:hover .pokemon-image img {
+    transform: translateY(-3px) scale(1.08);
+    filter: drop-shadow(0 6px 4px #20372b40);
+  }
+}
+.pokemon-card:has(.card-trigger:active) {
+  transform: translateY(3px);
+}
+@media (prefers-reduced-motion: reduce) {
+  .pokemon-card:hover,
+  .pokemon-card:has(.card-trigger:active),
+  .pokemon-card:hover .pokemon-image img {
+    transform: none;
+  }
+}
+.accent-grass,
+.accent-bug {
+  --accent: #538e59;
+}
+.accent-fire {
+  --accent: #ce683f;
+}
+.accent-water,
+.accent-ice {
+  --accent: #4b87b9;
+}
+.accent-poison,
+.accent-ghost {
+  --accent: #9362a4;
+}
+.accent-electric {
+  --accent: #b99b2b;
+}
+.accent-ground,
+.accent-rock {
+  --accent: #a18559;
+}
+.accent-psychic {
+  --accent: #c45d85;
+}
+.accent-fighting,
+.accent-dragon {
+  --accent: #a7574e;
+}

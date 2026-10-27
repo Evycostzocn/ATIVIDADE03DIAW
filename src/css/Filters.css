@@ -1,0 +1,20 @@
+.filter-field {
+  width: 225px;
+  max-width: 100%;
+}
+.clear-button {
+  color: #a3262b;
+  border-color: #e7cbcc;
+  min-height: 49px;
+  font-size: 0.85rem;
+  white-space: nowrap;
+}
+@media (max-width: 700px) {
+  .filter-field {
+    flex: 1;
+    min-width: 140px;
+  }
+  .clear-button {
+    padding-inline: 10px;
+  }
+}

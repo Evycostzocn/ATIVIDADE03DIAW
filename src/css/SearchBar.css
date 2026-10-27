@@ -1,0 +1,10 @@
+.search-field {
+  flex: 1;
+  min-width: 200px;
+}
+@media (max-width: 700px) {
+  .search-field {
+    flex-basis: 100%;
+    min-width: 0;
+  }
+}
